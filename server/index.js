@@ -8,11 +8,11 @@ const { SERVER_PORT, CONNECTION_STRING } = process.env
 
 app.use(express.json())
 
-app.get('/api/product', productCtrl.getAllProducts)
-app.get('/api/product/:id', productCtrl.getOneProduct)
-app.post('/api/product/', productCtrl.createProduct)
-app.put('/api/product/:id', productCtrl.updateProduct)
-app.delete('/api/product/:id', productCtrl.deleteProduct)
+app.get('/api/products', productCtrl.getAllProducts)
+app.get('/api/products/:id', productCtrl.getOneProduct)
+app.post('/api/products/', productCtrl.createProduct)
+app.put('/api/products/:id', productCtrl.updateProduct)
+app.delete('/api/products/:id', productCtrl.deleteProduct)
 
 massive({
     connectionString: CONNECTION_STRING,
